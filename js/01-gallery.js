@@ -5,6 +5,7 @@ import { galleryItems } from './gallery-items.js';
 
 
 const galleryContainer = document.querySelector('.gallery');
+
 const itemMarkup = createGalleryItemsMarkup(galleryItems);
 galleryContainer.insertAdjacentHTML('beforeend', itemMarkup);
 
@@ -35,7 +36,7 @@ function createGalleryItemsMarkup(gallery){
 function onGalleryClick(event) {
     event.preventDefault();
 
-    // перевіряю чи клік event.target був саме по картинці , якщо ні - вихожу
+    // перевіряю чи клік event.target був саме по картинці , якщо ні - вихожу все що нижче не виконується
     if (event.target.nodeName !== 'IMG') {
         return;
     }
